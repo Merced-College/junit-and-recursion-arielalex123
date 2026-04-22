@@ -61,12 +61,18 @@ public class TestingRecursion {
 		
 		if(str.length() < 2)
 			return 0;
+		//combination countHi & strCount
+		if(str.charAt(0) == 'x')
+			if(str.length() >= 3 && str.substring(1, 3).equals("hi"))
+				return countHi2(str.substring(3));
+			
+			else
+				return countHi2(str.substring(1));
 		
 		if(str.substring(0, 2).equals("hi"))
-			return 1 + countHi(str.substring(1));
-		else
-			return 0 + countHi(str.substring(1));
-		
+			return 1 + countHi2(str.substring(2));
+
+		return countHi2(str.substring(1));
 	}
 	
 	public static void main(String [] arg) {
@@ -74,6 +80,7 @@ public class TestingRecursion {
 		//System.out.println(strCount("catcowcat", "cat"));
 		//System.out.println(stringClean("yyzzzza"));
 		//System.out.println(countHi("xxxhixawdshi"));
+		//System.out.println(countHi2("ahixhi"));
 	
 	}
 	
