@@ -24,8 +24,24 @@ public class TestingRecursion {
 			return count8(n);
 	}//end count8
 	
+	public static int strCount(String str, String sub) {
+		
+		if(str.length() < sub.length())
+			return 0;
+		if(str.substring(0 , sub.length()).equals(sub))
+			return 1 + strCount(str.substring(sub.length()), sub);
+		else
+			return strCount(str.substring(1), sub);
+	}// end strCount
+	
+	public static  String stringClean(String str) {
+		
+		
+	}
+	
 	public static void main(String [] arg) {
-		System.out.println(count8(8818));
+		//System.out.println(count8(8818));
+		//System.out.println(strCount("catcowcat", "cat"));
 	
 	
 	
