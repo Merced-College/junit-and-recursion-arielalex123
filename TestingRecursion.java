@@ -45,11 +45,35 @@ public class TestingRecursion {
 			return str.charAt(0) + stringClean(str.substring(1));
 	}//end stringClean
 	
+	public static int countHi(String str) {
+		//some like strCount
+		if(str.length() < 2)
+			return 0;
+		
+		if(str.substring(0, 2).equals("hi"))
+			return 1 + countHi(str.substring(1));
+		else
+			return 0 + countHi(str.substring(1));
+		
+	}//end countHi
+	
+	public static int countHi2(String str) {
+		
+		if(str.length() < 2)
+			return 0;
+		
+		if(str.substring(0, 2).equals("hi"))
+			return 1 + countHi(str.substring(1));
+		else
+			return 0 + countHi(str.substring(1));
+		
+	}
+	
 	public static void main(String [] arg) {
 		//System.out.println(count8(8818));
 		//System.out.println(strCount("catcowcat", "cat"));
 		//System.out.println(stringClean("yyzzzza"));
-	
+		//System.out.println(countHi("xxxhixawdshi"));
 	
 	}
 	

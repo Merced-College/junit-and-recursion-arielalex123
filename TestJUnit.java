@@ -79,5 +79,29 @@ class TestJUnit {
 		assertEquals("nameIsJv", TestingRecursion.stringClean("naaammeeIIsssJvv"));
 	}
 	
+	@Test
+	public void testCountHi_1() {
+		assertEquals(1, TestingRecursion.countHi("xxhixx"));
+	}
+	
+	@Test
+	public void testCountHi_2() {
+		assertEquals(2, TestingRecursion.countHi("xhixhix"));
+	}
+	
+	@Test
+	public void testCountHi_3() {
+		assertEquals(1, TestingRecursion.countHi("hi"));
+	}
+	
+	@Test
+	public void testCountHi_4() {
+		assertEquals(3, TestingRecursion.countHi("sdhiasdhiasdhi"));
+	}
+	
+	@Test
+	public void testCountHi_5() {
+		assertEquals(0, TestingRecursion.countHi("helloWorld"));
+	}
 
 }
