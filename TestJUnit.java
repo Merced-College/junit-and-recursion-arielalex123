@@ -54,6 +54,30 @@ class TestJUnit {
 		assertEquals(2, TestingRecursion.strCount("catdogcowcatdog", "dog"));
 	}
 	
+	@Test
+	public void testStringClean_1() {
+		assertEquals("yza", TestingRecursion.stringClean("yyyzzza"));
+	}
+	
+	@Test
+	public void testStringClean_2() {
+		assertEquals("abcd", TestingRecursion.stringClean("abbbbbcccddd"));
+	}
+	
+	@Test
+	public void testStringClean_3() {
+		assertEquals("Helo", TestingRecursion.stringClean("Hellooo"));
+	}
+	
+	@Test
+	public void testStringClean_4() {
+		assertEquals("world", TestingRecursion.stringClean("wwwoorlldd"));
+	}
+	
+	@Test
+	public void testStringClean_5() {
+		assertEquals("nameIsJv", TestingRecursion.stringClean("naaammeeIIsssJvv"));
+	}
 	
 
 }

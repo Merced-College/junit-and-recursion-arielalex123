@@ -36,13 +36,19 @@ public class TestingRecursion {
 	
 	public static  String stringClean(String str) {
 		
+		if(str.length() <= 1) 
+			return str;
 		
-	}
+		if(str.charAt(0) == str.charAt(1))
+			return stringClean(str.substring(1));
+		else
+			return str.charAt(0) + stringClean(str.substring(1));
+	}//end stringClean
 	
 	public static void main(String [] arg) {
 		//System.out.println(count8(8818));
 		//System.out.println(strCount("catcowcat", "cat"));
-	
+		//System.out.println(stringClean("yyzzzza"));
 	
 	
 	}
